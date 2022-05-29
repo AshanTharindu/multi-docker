@@ -18,10 +18,10 @@ jobs:
       - run: docker build -t ashantharindu/multi-server:latest ./server
       - run: docker build -t ashantharindu/multi-worker:latest ./worker
 
-      - run: docker push ashantharindu/multi-client
-      - run: docker push ashantharindu/multi-nginx
-      - run: docker push ashantharindu/multi-server
-      - run: docker push ashantharindu/multi-worker
+      - run: docker push ashantharindu/multi-client:latest
+      - run: docker push ashantharindu/multi-nginx:latest
+      - run: docker push ashantharindu/multi-server:latest
+      - run: docker push ashantharindu/multi-worker:latest
  
       - name: Generate deployment package
         run: zip -r deploy.zip . -x '*.git*'
